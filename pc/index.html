@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NorMacroPad for Windows</title>
+  <meta name="description" content="The free Windows program that presses the keys you tap in the NorMacroPad phone app.">
+  <link rel="icon" href="../icon.png">
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    // The Microsoft Store page. Leave empty until the Store listing is live;
+    // the page then offers the setup download instead. Once set, PCs go
+    // straight to the Store. (The phone apps link to this page,
+    // so this is the only place that ever changes.)
+    var STORE_URL = '';
+    if (STORE_URL && /Windows/.test(navigator.userAgent) && !/[?&]stay/.test(location.search)) {
+      location.replace(STORE_URL);
+    }
+  </script>
+</head>
+<body>
+<main>
+  <header><img src="../icon.png" alt=""><a href="../">NorMacroPad</a></header>
+
+  <h1>NorMacroPad for Windows</h1>
+  <p>The free program that presses the keys you tap in the NorMacroPad phone app.
+    Windows 10 and 11.</p>
+
+  <div class="buttons">
+    <a class="button" id="store" href="#" hidden>Get it from Microsoft Store</a>
+    <a class="button" id="setup" href="https://github.com/ahmedbermo-ui/normacropad/releases/latest/download/NorMacroPad-Setup.exe">Download for Windows</a>
+  </div>
+  <p class="small" id="setup-note">If Windows says it “protected your PC”, click <strong>More info</strong>,
+    then <strong>Run anyway</strong>.</p>
+
+  <h2>Then</h2>
+  <div class="card">
+    <ol>
+      <li>Open NorMacroPad. If Windows asks, allow it on <strong>private networks</strong>
+        so your phone can reach it.</li>
+      <li>In the phone app, tap the connection bar, then <strong>Scan the QR code</strong> shown on the PC.</li>
+    </ol>
+  </div>
+  <p class="small">Phone and PC must be on the same WiFi. Guest networks often block this; a phone hotspot works too.</p>
+
+  <footer>
+    <a href="../">Home</a>
+    <a href="../privacy/">Privacy</a>
+  </footer>
+</main>
+<script>
+  if (STORE_URL) {
+    var s = document.getElementById('store');
+    s.href = STORE_URL;
+    s.hidden = false;
+    document.getElementById('setup').className = 'button secondary';
+    document.getElementById('setup').textContent = 'Or download the setup file';
+  }
+</script>
+</body>
+</html>
