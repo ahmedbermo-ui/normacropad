@@ -12,7 +12,7 @@
     // the page then offers the setup download instead. Once set, PCs go
     // straight to the Store. (The phone apps link to this page,
     // so this is the only place that ever changes.)
-    var STORE_URL = '';
+    var STORE_URL = 'https://apps.microsoft.com/detail/9P13XF03B1HS';
     if (STORE_URL && /Windows/.test(navigator.userAgent) && !/[?&]stay/.test(location.search)) {
       location.replace(STORE_URL);
     }
